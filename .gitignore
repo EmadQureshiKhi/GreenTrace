@@ -1,0 +1,17 @@
+# Monorepo root: frontend/ (Next.js app, contracts, docs) and backend-listener/ (optional poller).
+# Each folder's own .gitignore covers its build output and secrets; this file covers the root.
+submission/
+screenshots/
+CLAUDE.md
+AGENTS.md
+.claude/
+.DS_Store
+
+# Never commit secrets, dependencies or large media from anywhere in the repo
+node_modules/
+.env
+.env.*
+!.env.example
+.vercel
+*.mp4
+*.mov
