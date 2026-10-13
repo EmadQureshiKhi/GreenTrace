@@ -1,0 +1,23 @@
+{
+  "name": "greentrace-listener",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Watches the GreenTrace exchange contract on Hedera and asks the app to complete purchases and retirements",
+  "type": "module",
+  "scripts": {
+    "start": "tsx index.ts",
+    "dev": "tsx watch index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "tsx": "^4.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
