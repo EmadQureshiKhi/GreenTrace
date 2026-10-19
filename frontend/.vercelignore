@@ -1,0 +1,16 @@
+# Only the app is deployed; tests, tooling, generated docs assets and local state stay local.
+.env*
+!.env.example
+.next
+.next-*
+.venv
+node_modules
+artifacts
+cache
+e2e
+screenshots
+assets
+docs
+tools
+test-support
+*.tsbuildinfo
