@@ -1,0 +1,29 @@
+%% title: Buying and retiring credits
+%% subtitle: The server only moves tokens after reading the payment or request back from the mirror node, and only once.
+sequenceDiagram
+  autonumber
+  actor B as Buyer wallet
+  participant App as GreenTrace server
+  participant C as GreenTraceExchange
+  participant M as Mirror node
+  participant H as Hedera (HTS, HCS)
+  participant S as Scheduled scan
+
+  B->>App: Create order (listing, tonnes)
+  App->>App: Fix HBAR price, reserve stock atomically
+  App-->>B: orderRef, exact amount
+  B->>C: purchase(orderRef) with HBAR
+  Note over C: Rejects a reused orderRef, forwards the HBAR<br/>to the treasury, emits CreditsPurchased
+  par browser confirms
+    B->>App: Confirm with tx hash
+  and if the tab closed
+    S->>App: Every minute (Supabase pg_cron)
+    App->>M: New contract events since the cursor
+  end
+  App->>M: Read tx: contract, event, orderRef, payer, amount
+  App->>App: Claim order (only one caller wins)
+  App->>H: Transfer CO2e tokens, CREDITS_PURCHASED
+  B->>C: requestRetirement(tonnes, certificateId)
+  App->>M: Verify event and the owner's linked wallet
+  App->>H: Wipe tokens (removed from total supply), CREDITS_RETIRED
+  App-->>B: Certificate partially offset or offset

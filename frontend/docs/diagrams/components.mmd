@@ -1,0 +1,53 @@
+%% title: Server components
+%% subtitle: Routes are thin; domain services and AI features call pure, tested functions and four infrastructure modules. Only hedera.ts can sign.
+flowchart LR
+  subgraph Routes["src/app/api (thin routes)"]
+    direction TB
+    R1["inventories, certificates"]
+    R2["orders, retirements"]
+    R3["ai/* (6 features)"]
+    R4["wallet, test-hbar"]
+    R5["internal/reconcile<br/>shared secret"]
+  end
+
+  subgraph Services["src/server/services"]
+    direction TB
+    S1["inventories.ts<br/>recompute lines, duplicate twins"]
+    S2["certificates.ts<br/>hash, pin, mint, verify"]
+    S3["orders.ts<br/>price, reserve, deliver once"]
+    S4["retirements.ts<br/>verify wallet, wipe, offset"]
+    S5["exchange-events.ts<br/>decode contract logs"]
+    S6["wallet.ts<br/>signed link, 25 HBAR grant"]
+  end
+
+  subgraph AIL["src/server/ai"]
+    direction TB
+    A1["extract, audit, rating,<br/>advisor, reduction, gri"]
+    A0["provider.ts<br/>OpenAI or Claude"]
+    A2["rate-limit.ts"]
+  end
+
+  subgraph Lib["src/lib (pure, unit tested)"]
+    direction TB
+    L1["emissions/catalog.ts"]
+    L2["audit/rules.ts"]
+    L3["ai-math.ts"]
+    L4["hashing.ts"]
+  end
+
+  subgraph Infra["Infrastructure modules"]
+    direction TB
+    I1["hedera.ts<br/>the only signer"]
+    I2["mirror.ts<br/>read back payments"]
+    I3["ipfs.ts<br/>Pinata pins"]
+    I4["supabase-admin.ts<br/>service role, no-store"]
+  end
+
+  Routes -->|validated input| Services
+  Routes -->|validated input| AIL
+  Services -->|numbers and hashes| Lib
+  AIL -->|numbers from code| Lib
+  Services -->|sign, read, store| Infra
+  AIL -->|anchor results| Infra
+
+  class I1 emph

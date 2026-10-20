@@ -1,0 +1,49 @@
+%% title: System overview
+%% subtitle: The browser is untrusted, the server holds the treasury key, and Hedera is the source of truth for anything already anchored.
+flowchart TB
+  subgraph Browser["Browser (untrusted)"]
+    UI["Next.js app<br/>React, Tailwind, TanStack Query"]
+    MM["MetaMask<br/>the user's own wallet"]
+  end
+
+  subgraph Server["Next.js server (trusted)"]
+    API["API routes<br/>session auth, zod validation"]
+    AI["AI services<br/>extract, audit, rate, advise, plan, draft"]
+    SVC["Domain services<br/>inventories, certificates, orders, retirements"]
+    KEY[("Treasury key<br/>server only")]
+  end
+
+  LLM["OpenAI or Claude<br/>structured outputs"]
+
+  subgraph Data["Data"]
+    SB[("Supabase Postgres<br/>row level security")]
+    ST[("Supabase Storage<br/>private bills")]
+    IPFS[("IPFS via Pinata<br/>certificate metadata")]
+  end
+
+  subgraph Hedera["Hedera testnet"]
+    EVM["GreenTraceExchange<br/>smart contract"]
+    HCS["Consensus Service<br/>audit topic"]
+    HTS["Token Service<br/>CO2e token, certificate NFTs"]
+    MIR["Mirror node"]
+  end
+
+  LST["Supabase pg_cron<br/>scan every minute"]
+
+  UI -->|bearer token| API
+  MM -->|pay, request retirement| EVM
+  API --> AI
+  API --> SVC
+  AI -->|schema-checked JSON| LLM
+  SVC --> SB
+  SVC --> ST
+  SVC --> IPFS
+  SVC -->|signs with| KEY
+  KEY --> HCS
+  KEY --> HTS
+  EVM --> MIR
+  SVC -->|verify events| MIR
+  LST -->|/api/internal/scan| API
+  UI -.->|reads under RLS| SB
+
+  class SVC emph

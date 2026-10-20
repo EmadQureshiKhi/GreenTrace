@@ -1,0 +1,38 @@
+%% title: Runtime and trust boundaries
+%% subtitle: What each part is trusted with. Secrets stay on the server; users keep their own keys; anything on Hedera can be checked by anyone.
+flowchart TB
+  subgraph Public["Anyone"]
+    V["Verifier, buyer, regulator"]
+    HS["HashScan"]
+  end
+  subgraph Client["User device (untrusted)"]
+    BR["Browser<br/>session token only"]
+    W["MetaMask<br/>user signs payments and retirements"]
+  end
+  subgraph App["App host (trusted)"]
+    N["Next.js server<br/>treasury key, service role,<br/>AI and Pinata keys"]
+
+  end
+  subgraph Managed["Managed services"]
+    SBA["Supabase<br/>Auth, Postgres with RLS, Storage,<br/>pg_cron scan every minute"]
+    OAI["OpenAI or Anthropic API<br/>bills sent only to be read"]
+    PIN["Pinata IPFS<br/>public metadata only"]
+  end
+  subgraph Ledger["Hedera network"]
+    HED["Consensus, tokens, contract"]
+    MN["Mirror node REST"]
+  end
+
+  BR -->|HTTPS + bearer token| N
+  BR -->|anon key, RLS| SBA
+  W -->|JSON-RPC relay| HED
+  N -->|service role| SBA
+  SBA -->|calls /api/internal/scan| N
+  N --> OAI
+  N --> PIN
+  N -->|signed transactions| HED
+  N --> MN
+  V -->|/certificates/id| N
+  V --> HS --> MN
+
+  class N emph

@@ -1,0 +1,74 @@
+%% title: Data model
+%% subtitle: Users own inventories and drafts; certificates, ratings and retirements form a public registry. Every AI or chain record keeps its hash and topic sequence.
+erDiagram
+  profiles ||--o{ emission_data : owns
+  emission_data ||--o{ documents : "built from"
+  emission_data ||--o{ ai_audits : "audited by"
+  emission_data ||--o| certificates : "certified once"
+  ai_audits ||--o{ certificates : gates
+  certificates ||--o{ retirements : "offset by"
+  carbon_credits ||--o| credit_ratings : "rated by AI"
+  carbon_credits ||--o{ orders : "sold in"
+  profiles ||--o{ orders : places
+  emission_data ||--o{ reduction_plans : "planned by AI"
+
+  profiles {
+    uuid id PK
+    text wallet_address UK "set by server after signature"
+    text hedera_account_id
+  }
+  emission_data {
+    uuid id PK
+    numeric total_emissions "kg CO2e, computed by code"
+    jsonb processed_data "lines with factor ids"
+  }
+  documents {
+    uuid id PK
+    text sha256 "unique per user"
+    text fingerprint "supplier, invoice, period"
+    text extraction_hash
+    bigint hcs_sequence
+  }
+  ai_audits {
+    uuid id PK
+    int risk_score
+    text risk_level
+    text audit_hash
+    bigint hcs_sequence
+  }
+  certificates {
+    uuid id PK
+    uuid emission_data_id UK
+    text data_hash "sha256 canonical JSON"
+    text metadata_cid
+    bigint nft_serial
+    int offset_tonnes
+  }
+  carbon_credits {
+    uuid id PK
+    numeric price_hbar
+    int available "reserved atomically"
+  }
+  credit_ratings {
+    uuid credit_id PK
+    text grade
+    text rating_hash
+  }
+  orders {
+    uuid id PK
+    text order_ref UK
+    text status "awaiting_payment to delivered"
+    text payment_tx_hash UK
+    bigint total_tinybar
+  }
+  retirements {
+    uuid id PK
+    text request_tx_hash UK
+    int amount
+    text wipe_tx_id
+  }
+  reduction_plans {
+    uuid id PK
+    jsonb plan
+    text plan_hash
+  }

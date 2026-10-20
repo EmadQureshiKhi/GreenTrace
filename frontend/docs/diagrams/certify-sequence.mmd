@@ -1,0 +1,32 @@
+%% title: Certifying an inventory
+%% subtitle: The AI reads and reviews; code computes, hashes and decides; Hedera records each step in order.
+sequenceDiagram
+  autonumber
+  actor U as Organization
+  participant App as GreenTrace server
+  participant AI as AI model
+  participant DB as Postgres
+  participant H as Hedera (HCS, HTS)
+  participant I as IPFS
+
+  U->>App: Upload bills (PDF or photo)
+  App->>AI: Read quantities, units, periods, evidence
+  AI-->>App: Schema-checked JSON
+  App->>DB: Store reading, fingerprint, duplicate twins
+  App->>H: AI_EXTRACTION hash
+  U->>App: Review values, create inventory
+  App->>DB: Recompute every line from the catalog
+  U->>App: Run audit
+  App->>App: 9 deterministic rules
+  App->>AI: Review for plausibility
+  AI-->>App: Extra findings only
+  App->>H: AI_AUDIT hash
+  alt risk is high
+    App-->>U: Certification blocked, findings listed
+  else low or medium risk
+    App->>App: sha256(canonical inventory JSON)
+    App->>I: Pin certificate metadata (CID)
+    App->>H: Mint certificate NFT (metadata = ipfs://CID)
+    App->>H: CERTIFICATE_ISSUED (hash, CID, serial)
+    App-->>U: Certificate with public verification page
+  end
