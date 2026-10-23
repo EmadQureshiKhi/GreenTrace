@@ -57,7 +57,8 @@ During a pilot, GreenTrace would report:
 3. Planned reductions (t CO2e per year) and, once a second inventory is certified, achieved reductions.
 4. Tonnes retired, by credit grade.
 
-The platform itself runs on Hedera, an energy-efficient proof-of-stake network; the marginal footprint of anchoring a record is negligible compared with the emissions it helps measure.
+The platform itself runs on Hedera, which used the least energy of the proof-of-stake networks in UCL's 2021 comparison and offsets its own footprint to run carbon negative.
+The marginal footprint of anchoring a record is negligible compared with the emissions it helps measure.
 
 ## Carbon reduction projections for a single organization
 

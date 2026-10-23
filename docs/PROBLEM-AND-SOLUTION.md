@@ -1,6 +1,7 @@
 # Problem statement and solution overview
 
 IEEE ClimateChain Global Hackathon 2026, Track 1: Carbon Markets & Emissions Transparency.
+Live app: [greentrace-app.vercel.app](https://greentrace-app.vercel.app) · Code: [github.com/EmadQureshiKhi/GreenTrace](https://github.com/EmadQureshiKhi/GreenTrace) · Demo: [YouTube](https://youtu.be/xWBNFqHfmGY).
 
 ## The problem
 
@@ -41,7 +42,8 @@ GreenTrace is an end-to-end, verifiable carbon accounting platform that combines
    An AI advisor builds a diversified basket for the remaining emissions.
    Credits are bought in HBAR through a smart contract and retired by destroying the tokens, so a tonne can never be claimed twice.
 5. **Plan and report.**
-   An AI planner proposes reduction measures with tonnes computed from the inventory, and an AI drafter writes GRI disclosures from the stakeholder and materiality assessment.
+   An AI planner proposes reduction measures with tonnes computed from the inventory.
+   SEMA runs the stakeholder engagement and materiality assessment GRI 3 asks for, logging each step on Hedera, and an AI drafter writes the GRI disclosures from it.
 
 ## Target users
 
@@ -63,4 +65,5 @@ GreenTrace is an end-to-end, verifiable carbon accounting platform that combines
 
 - **AI with accountability.** Every AI output is schema-constrained, computed numbers come from code, and each result is hashed and anchored with the model name and prompt version.
 - **Verification by anyone.** A certificate is not a PDF; it is a recomputable hash, an NFT and an ordered consensus record.
+- **A ledger that does not add to the problem.** Hedera is among the lowest-energy proof-of-stake networks and offsets its own footprint, and its Consensus Service gives an ordered, immutable audit trail at a fraction of a cent per record.
 - **Double counting prevented in three places:** duplicate bills are caught before certification, each inventory backs one certificate, and retired credits leave the token supply.

@@ -50,7 +50,7 @@ Every AI output is a JSON object validated against a schema before the applicati
 
 - One structured call per document or feature, no agent loops.
 - The high-volume task (bill reading) runs on a smaller model that matched the larger one's accuracy in testing, which cuts compute per document.
-- Hedera's proof-of-stake consensus keeps the cost and energy of anchoring each result negligible.
+- Hedera's proof-of-stake consensus keeps the cost and energy of anchoring each result negligible, and Hedera offsets its own footprint to run carbon negative.
 
 ## Security against misuse
 

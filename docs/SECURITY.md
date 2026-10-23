@@ -97,6 +97,7 @@ Hedera is the source of truth for anything already anchored.
 - Server-side database reads bypass the framework's fetch cache, so verification and order state are always read live.
 - The testnet HBAR grant is one per account, claimed with a conditional update so concurrent requests cannot both succeed, and it stops when the treasury reaches a fixed reserve.
 - AI features are rate limited per user and per feature.
+- Continuous integration (GitHub Actions) runs the type check, lint, unit, contract and row level security tests and a production build on every push, and checks every day that the live deployment's services are healthy and a certificate still verifies against Hedera.
 
 ## Known limitations
 

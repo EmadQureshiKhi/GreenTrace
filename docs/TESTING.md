@@ -25,6 +25,8 @@ The deployed app at [greentrace-app.vercel.app](https://greentrace-app.vercel.ap
 | AI credit re-rating | Pass: BBB, 60/100 | Message #40 |
 | One-time 25 test HBAR grant | Pass: wallet 35.85 to 60.85 HBAR; the button disappears after the claim | - |
 | Mobile (390 px) and dark mode | Pass: certificate, landing and marketplace render correctly | - |
+| SEMA walkthrough and finalized report (22 October) | Pass: 5 stakeholder groups, sample size 385, 210 survey responses, 4 material topics; the report snapshot was hashed and logged | Message #63 |
+| "Message #N" proof links (22 October) | Pass: each link opens the topic message's transaction on HashScan | - |
 
 The live test found one issue, fixed and redeployed the same day: a certificate whose consensus record was not yet indexed by the mirror node showed as "Verified" with 4 of 5 checks; it now shows as pending and rechecks automatically until all checks pass.
 
@@ -61,11 +63,12 @@ The live test found one issue, fixed and redeployed the same day: a certificate 
 
 | Suite | Command | Result |
 | --- | --- | --- |
-| Unit: unit conversion, emission catalog, national grid factors, extraction prompt and grid warnings, audit rules, AI arithmetic, hashing | `npm test` | 41 passed |
+| Unit: unit conversion, emission catalog, national grid factors, extraction prompt and grid warnings, audit rules, AI arithmetic, hashing, exchange scan cursor, HashScan message links | `npm test` | 49 passed |
 | Smart contract: payments, double payment, retirement requests | `npm run test:contracts` | 6 passed |
 | Database: schema and row level security against real Postgres (cross-user reads, forged certificates, immutable certified inventories, atomic stock) | `npm run test:db` | All assertions passed |
 | Type check and lint | `npm run typecheck`, `npm run lint` | 0 errors |
 | Production build | `npm run build` | Succeeds |
+| Continuous integration | [GitHub Actions](https://github.com/EmadQureshiKhi/GreenTrace/actions/workflows/ci.yml) on every push, plus a daily live smoke test | Passing |
 
 ## AI model evaluation
 
@@ -88,4 +91,6 @@ Judgement-heavy features (audit, ratings, advisor, reduction plans, GRI drafting
 - Re-uploading a bill from an abandoned draft was wrongly reported as a duplicate; only copies that are actually counted are flagged now.
 - Gas limits were generous and Hedera bills at least 80% of the limit; limits are now set from measured usage (purchase about 55k gas, retirement about 25k).
 - The audit flagged the generic grid factor as too high for UK sites; electricity now uses official national grid factors chosen from the bill's site country.
+- "Message #N" proof links pointed at a HashScan page that does not exist; they now resolve the message's transaction through the mirror node.
+- SEMA showed 384 respondents on one page and 385 on another, and the report panel counted 0 responses instead of 210; sample sizes are now always computed from the saved parameters and responses are counted the same way everywhere.
 - Smaller interface issues: chart bars not rendering, inconsistent date formats, a SEMA topic count that double counted topics assessed both ways, and a calculator banner shown for the current session.

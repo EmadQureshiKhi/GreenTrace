@@ -42,10 +42,18 @@ Policies are tested against a real Postgres instance by `npm run test:db`.
 
 | Asset | Purpose |
 | --- | --- |
-| Consensus Service topic | Ordered, timestamped log of every certificate, audit, AI extraction, AI rating, reduction plan, purchase and retirement. Only the treasury can submit. |
+| Consensus Service topic | Ordered, timestamped, immutable log of every certificate, audit, AI extraction, AI rating, reduction plan, GRI draft, SEMA step, purchase and retirement. Only the treasury can submit. |
 | CO2e fungible token | One token is one tonne of CO2e. The treasury holds the supply and keeps a wipe key, so a retired credit is removed from the holder and from total supply. |
 | Certificate NFT collection | One NFT per certificate. Its metadata is the `ipfs://` URI of the certificate's content-addressed JSON. |
 | GreenTraceExchange contract | `purchase(orderRef)` forwards HBAR to the treasury and emits `CreditsPurchased`; `requestRetirement(amount, certificateId)` emits `RetirementRequested` from the holder's own wallet. |
+
+### Why Hedera
+
+- **Low energy, carbon negative:** in UCL's 2021 comparison of proof-of-stake networks Hedera used the least energy, and Hedera offsets its own footprint; a climate tool should not run on a ledger that adds emissions.
+- **Consensus Service as the audit trail:** messages get a consensus timestamp and a fixed order and cannot be edited or deleted, which is what an auditor or regulator needs.
+- **Fixed fees priced in US dollars:** logging a finalized SEMA report cost $0.00024, so every step can be anchored, not just the final certificate.
+- **Native tokens with retirement built in:** the CO2e token's wipe key removes retired credits from total supply, with no custom token contract to audit.
+- **Fast finality, EVM and a public mirror node:** payments are final in seconds, buyers use MetaMask, and the server verifies every payment and retirement on the mirror node before acting.
 
 ### AI services (frontend/src/server/ai)
 
@@ -95,6 +103,7 @@ The grant is claimed atomically per account and never takes the treasury below a
 3. The audit runs rule checks and the AI review and is anchored (`AI_AUDIT`).
 4. If the audit is current and not high risk, the server hashes the inventory, stores the metadata by CID, mints the NFT and anchors `CERTIFICATE_ISSUED`.
 5. Anyone can open `/certificates/<id>`; the verification endpoint recomputes the hash and checks it against the topic message, the NFT and the metadata.
+6. Every "message #N" proof link goes through `/hcs/<topic>/<sequence>`, which looks the message up on the mirror node and opens its transaction on HashScan (HashScan has no page per topic message).
 
 ### Buy and retire credits
 
@@ -131,13 +140,14 @@ Diagram sources: [`docs/diagrams/`](diagrams).
 | AI | Anthropic SDK (Claude) or OpenAI SDK, structured outputs with zod schemas |
 | Storage | IPFS via Pinata when configured; content-addressed CIDv1 otherwise |
 | Tests | Vitest (unit), Hardhat (contract), Postgres (schema and RLS) |
+| CI | GitHub Actions: typecheck, lint, all three test suites, a production build, the listener typecheck, and a daily smoke test of the live deployment |
 
 ## Commands
 
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Run the app on port 3000 |
-| `npm test` | Unit tests (units, catalog, audit rules, AI arithmetic, hashing) |
+| `npm test` | Unit tests (units, catalog, grid factors, audit rules, AI arithmetic, hashing, exchange scan, HashScan links) |
 | `npm run test:contracts` | Contract tests |
 | `npm run test:db` | Apply migrations to a throwaway Postgres and run the RLS tests |
 | `npm run db:migrate` | Apply migrations to the Supabase database |
