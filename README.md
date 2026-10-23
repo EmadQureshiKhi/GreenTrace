@@ -33,13 +33,15 @@
   <a href="#demo-video">Demo</a> ·
   <a href="#why-we-chose-hedera">Why Hedera</a> ·
   <a href="#what-it-does">Features</a> ·
-  <a href="#track-1-alignment">Track 1</a> ·
   <a href="#ai-that-you-can-audit">AI</a> ·
   <a href="#hedera-integration">Hedera</a> ·
   <a href="#screenshots">Screenshots</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#architecture">Architecture</a> ·
-  <a href="#ieee-climatechain-deliverables">Deliverables</a>
+  <a href="#ieee-climatechain-deliverables">Deliverables</a> ·
+  <a href="#who-it-is-for">Who it is for</a> ·
+  <a href="#roadmap">Roadmap</a> ·
+  <a href="#track-1-alignment">Track 1</a>
 </p>
 
 <p align="center">
@@ -167,17 +169,6 @@ Hedera meets all of them out of the box.
 </table>
 
 <img src="assets/readme/pipeline.png" alt="From a utility bill to a retired tonne: AI reads bills into an inventory, nine rules and an AI auditor gate certification on Hedera, then credits are rated, bought through a contract and retired by wiping the tokens" width="960">
-
-## Track 1 alignment
-
-| Track 1 asks for | GreenTrace |
-| --- | --- |
-| Real-time emissions tracking | AI reads bills into a Scope 1 and 2 inventory in seconds; every reading is anchored on Hedera |
-| Blockchain-based carbon credit verification | Certificates are NFTs whose inventory hash, metadata and consensus record anyone can recheck |
-| Smart contracts to prevent double counting | Duplicate bills are blocked before certification, each payment settles one order on chain, and retirement wipes tokens from supply |
-| Transparent carbon trading platforms | HBAR purchases through `GreenTraceExchange`, AI-rated projects, and every trade on the public audit topic |
-
-<img src="assets/readme/double-counting.png" alt="Three places a tonne cannot be counted twice: bill fingerprints before certification, one payment per order in the exchange contract, and token wipes on retirement" width="960">
 
 ## AI that you can audit
 
@@ -354,6 +345,51 @@ No secret is ever exposed to the browser: `NEXT_PUBLIC_` variables hold public i
 
 Treasury signing happens only on the server; row level security keeps inventories private and makes certificates, ratings and retirements a public registry; payments and retirements are verified on the mirror node before anything moves.
 Details: [docs/SECURITY.md](docs/SECURITY.md).
+
+## Why this matters now
+
+Emissions reporting has moved from voluntary disclosure to compliance, and compliance gets audited.
+The EU's CSRD requires assurance on sustainability statements, California's SB 253 requires large companies to disclose Scope 1 and 2 emissions with third-party assurance, and ISSB standards (IFRS S2) are being adopted around the world.
+Large companies pass these requests down to their suppliers, so firms with no sustainability team now need numbers an auditor will accept.
+GreenTrace was built by someone who has worked in ESG at a Big 4 firm, around what an assurance engagement needs: every figure traceable to its source, and every step recorded where nobody can quietly edit it.
+It does not replace the auditor; it gives the auditor the evidence trail.
+
+## Who it is for
+
+| User | What GreenTrace gives them |
+| --- | --- |
+| **Sustainability consultants** | Inventories and GRI reports for many small clients without manual transcription, and a deliverable each client can prove |
+| **Large companies with supplier programmes** | Verified Scope 1 and 2 data from hundreds of suppliers, checkable without auditing each one |
+| **Small and mid-sized firms** | A credible answer to emissions requests from customers, lenders and regulators, with no sustainability team |
+| **Credit buyers** | Rated projects, on-chain purchases and retirements that can never be claimed twice |
+| **Auditors and the public** | A certificate page and a Hedera topic that anyone can check, with no account |
+
+Adoption is a normal web app: sign up, upload bills, review, certify.
+A wallet is only needed to buy or retire credits, and bills stay private because only hashes go on chain.
+
+## Roadmap
+
+| Phase | Scope |
+| --- | --- |
+| Now | Full flow live on Hedera testnet: AI extraction, audit, certification, marketplace, retirement, reduction planning, SEMA and GRI reporting |
+| 3 months | Pilot with 20 to 50 organizations through two or three consultants |
+| 6 months | Mainnet, key management in a KMS or HSM, bridging to recognised credit registries, third-party security review |
+| 12 months | Supplier programmes, Scope 3, multi-language extraction, a partner API, and independent verifiers co-signing certificates with their own Hedera keys |
+
+Details: [docs/ADOPTION-AND-ROADMAP.md](docs/ADOPTION-AND-ROADMAP.md).
+
+## Track 1 alignment
+
+| Track 1 asks for | GreenTrace |
+| --- | --- |
+| Real-time emissions tracking | AI reads bills into a Scope 1 and 2 inventory in seconds; every reading is anchored on Hedera |
+| Blockchain-based carbon credit verification | Certificates are NFTs whose inventory hash, metadata and consensus record anyone can recheck |
+| Smart contracts to prevent double counting | Duplicate bills are blocked before certification, each payment settles one order on chain, and retirement wipes tokens from supply |
+| Transparent carbon trading platforms | HBAR purchases through `GreenTraceExchange`, AI-rated projects, and every trade on the public audit topic |
+
+<img src="assets/readme/double-counting.png" alt="Three places a tonne cannot be counted twice: bill fingerprints before certification, one payment per order in the exchange contract, and token wipes on retirement" width="960">
+
+<p align="center"><b>Built for the IEEE ClimateChain Global Hackathon 2026, Track 1: Carbon Markets & Emissions Transparency</b></p>
 
 ---
 
