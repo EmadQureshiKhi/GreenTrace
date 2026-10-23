@@ -9,8 +9,6 @@ artifacts
 cache
 e2e
 screenshots
-assets
-docs
 tools
 test-support
 *.tsbuildinfo

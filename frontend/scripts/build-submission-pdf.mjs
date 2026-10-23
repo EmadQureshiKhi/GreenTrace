@@ -14,12 +14,14 @@ import { marked } from 'marked';
 import { launch } from './chrome.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
-const DOCS = join(ROOT, 'docs');
+// The deliverables and figures live at the repo root, next to frontend/.
+const REPO = join(ROOT, '..');
+const DOCS = join(REPO, 'docs');
 const out = resolve(process.argv[2] || 'GreenTrace-Submission.pdf');
 const { light: p } = JSON.parse(
   execFileSync(join(ROOT, '.venv', 'bin', 'python'), ['-m', 'tools.make_readme_art', '--palette'], { cwd: ROOT, encoding: 'utf8' }),
 );
-const file = (...parts) => `file://${join(ROOT, ...parts)}`;
+const file = (...parts) => `file://${join(REPO, ...parts)}`;
 
 const chapters = [
   {

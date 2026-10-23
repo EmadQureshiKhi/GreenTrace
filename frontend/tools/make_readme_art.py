@@ -32,7 +32,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "assets" / "readme"
+OUT = ROOT.parent / "assets" / "readme"  # README figures live at the repo root
 TOKENS = ROOT / "src" / "app" / "globals.css"
 MARK = ROOT / "public" / "logo.png"
 FONTS = {
@@ -769,8 +769,9 @@ TREE = TreeFigure(
         Row(1, "contracts/", "GreenTraceExchange.sol and its tests"),
         Row(1, "supabase/", "Migrations with row level security, and Postgres tests"),
         Row(1, "scripts/", "setup-hedera, seed, db-migrate, submission PDF"),
-        Row(1, "docs/", "IEEE ClimateChain deliverables"),
         Row(0, "backend-listener/", "Optional self-hosted listener, for completion within seconds"),
+        Row(0, "docs/", "IEEE ClimateChain deliverables"),
+        Row(0, "assets/", "README figures and rendered diagrams"),
     ],
 )
 

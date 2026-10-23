@@ -31,7 +31,7 @@ export function Footer() {
         </div>
 
         <div className="space-y-2 text-sm">
-          <h3 className="font-semibold">On-chain transparency ({chainConfig.network})</h3>
+          <h3 className="font-semibold">On-chain transparency</h3>
           <ul className="space-y-1 text-muted-foreground">
             {chainConfig.topicId && (
               <li>
@@ -59,7 +59,7 @@ export function Footer() {
       </div>
       <div className="border-t">
         <div className="container mx-auto flex flex-col gap-2 px-4 py-4 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>GreenTrace prototype on Hedera testnet. Sample listings are illustrative; testnet tokens have no value.</p>
+          <p>Carbon accounting you can verify, not just trust. Every tonne measured, certified and retired in the open on Hedera.</p>
           <nav className="flex gap-4" aria-label="Legal">
             <Link href="/privacy" className="hover:text-foreground hover:underline">Privacy</Link>
             <Link href="/terms" className="hover:text-foreground hover:underline">Terms</Link>

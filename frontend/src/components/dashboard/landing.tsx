@@ -165,7 +165,11 @@ export function Landing() {
 
       <section className="rounded-2xl border bg-background/70 p-6 sm:p-8">
         <h2 className="text-xl font-semibold tracking-tight">Why Hedera</h2>
-        <div className="mt-4 grid gap-6 text-sm text-muted-foreground md:grid-cols-3">
+        <div className="mt-4 grid gap-6 text-sm text-muted-foreground sm:grid-cols-2 lg:grid-cols-4">
+          <p>
+            <span className="font-medium text-foreground">A carbon-neutral ledger.</span> Hedera offsets its own footprint to run carbon negative, so
+            recording climate data on it does not add to the problem it measures.
+          </p>
           <p>
             <span className="font-medium text-foreground">An ordered, tamper-evident log.</span> Hedera Consensus Service timestamps and orders every audit
             record, so the history of a certificate cannot be rewritten.

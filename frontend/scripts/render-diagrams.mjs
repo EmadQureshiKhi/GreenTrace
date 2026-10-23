@@ -1,4 +1,4 @@
-// Renders the system diagrams in docs/diagrams/*.mmd to assets/diagrams/*.png.
+// Renders the system diagrams in docs/diagrams/*.mmd to assets/diagrams/*.png (both at the repo root).
 // Usage: node scripts/render-diagrams.mjs [name ...]
 //
 // The README figures in assets/readme are drawn with Pillow (tools/make_readme_art.py). Graph-shaped
@@ -14,9 +14,10 @@ import { basename, join, resolve } from 'node:path';
 import { launch } from './chrome.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
-const SRC = join(ROOT, 'docs', 'diagrams');
-const OUT = join(ROOT, 'assets', 'diagrams');
-const MARK = join(ROOT, 'assets', 'readme', 'mark.png');
+const REPO = join(ROOT, '..');
+const SRC = join(REPO, 'docs', 'diagrams');
+const OUT = join(REPO, 'assets', 'diagrams');
+const MARK = join(REPO, 'assets', 'readme', 'mark.png');
 const MERMAID = 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
 const ELK = 'https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.7/dist/mermaid-layout-elk.esm.min.mjs';
 const WIDTH = 960;
