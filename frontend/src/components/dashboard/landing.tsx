@@ -116,7 +116,7 @@ export function Landing() {
 
       <section className="grid gap-6 lg:grid-cols-5">
         <div className="space-y-4 lg:col-span-3">
-          <h2 className="text-2xl font-semibold tracking-tight">Live on Hedera {chainConfig.network}</h2>
+          <h2 className="text-2xl font-semibold tracking-tight">Live on Hedera</h2>
           {isError ? (
             <p className="text-sm text-muted-foreground">Platform statistics are unavailable right now.</p>
           ) : (

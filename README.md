@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://greentrace-app.vercel.app"><img alt="Open the live app" src="https://img.shields.io/badge/Open_the_live_app-16a34a?style=for-the-badge&logo=vercel&logoColor=white"></a>
-  <a href="https://youtu.be/xWBNFqHfmGY"><img alt="Watch the demo" src="https://img.shields.io/badge/Watch_the_demo-10:21-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
+  <a href="https://youtu.be/xWBNFqHfmGY"><img alt="Watch the demo" src="https://img.shields.io/badge/Watch_the_demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
   <a href="https://greentrace-app.vercel.app/certificates/GT-2026-Q5LL89"><img alt="Verify a certificate" src="https://img.shields.io/badge/Verify_a_certificate-0f766e?style=for-the-badge&logo=checkmarx&logoColor=white"></a>
   <a href="https://hashscan.io/testnet/topic/0.0.11116480"><img alt="Audit trail on HashScan" src="https://img.shields.io/badge/Audit_trail-HashScan-222222?style=for-the-badge&logo=hedera&logoColor=white"></a>
 </p>
@@ -20,12 +20,13 @@
   <a href="https://ieee-climatechain-hack.devpost.com/"><img alt="IEEE ClimateChain Global Hackathon 2026" src="https://img.shields.io/badge/IEEE%20ClimateChain-Hackathon%202026-00629B?logo=ieee&logoColor=white"></a>
   <img alt="Track 1" src="https://img.shields.io/badge/Track%201-Carbon%20Markets%20%26%20Emissions%20Transparency-16a34a">
   <a href="https://hashscan.io/testnet/topic/0.0.11116480"><img alt="Hedera testnet" src="https://img.shields.io/badge/Hedera-testnet-222222?logo=hedera"></a>
-  <img alt="AI" src="https://img.shields.io/badge/AI-OpenAI%20%7C%20Claude-8b5cf6">
+  <img alt="IPFS" src="https://img.shields.io/badge/IPFS-Pinata-65c2cb?logo=ipfs&logoColor=white">
   <img alt="Next.js 14" src="https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white">
   <img alt="Supabase" src="https://img.shields.io/badge/Supabase-Postgres%20%2B%20RLS-3ecf8e?logo=supabase&logoColor=white">
   <img alt="Solidity" src="https://img.shields.io/badge/Solidity-0.8.24-363636?logo=solidity">
   <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-blue">
+  <a href="https://github.com/EmadQureshiKhi/GreenTrace/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/EmadQureshiKhi/GreenTrace/actions/workflows/ci.yml/badge.svg"></a>
 </p>
 
 <p align="center">
@@ -50,31 +51,30 @@
 
 <table align="center">
   <tr>
-    <td align="center" width="25%"><b>6 AI features</b><br><sub>every number computed by code</sub></td>
-    <td align="center" width="25%"><b>9 audit rules</b><br><sub>before any certificate is issued</sub></td>
-    <td align="center" width="25%"><b>5 public checks</b><br><sub>re-run on every certificate view</sub></td>
-    <td align="center" width="25%"><b>14 grid factors</b><br><sub>official, picked by the site's country</sub></td>
+    <td align="center" width="240"><img src="https://api.iconify.design/lucide/sparkles.svg?color=%2316a34a&width=30" width="30" alt=""></td>
+    <td align="center" width="240"><img src="https://api.iconify.design/lucide/shield-check.svg?color=%2316a34a&width=30" width="30" alt=""></td>
+    <td align="center" width="240"><img src="https://api.iconify.design/lucide/badge-check.svg?color=%2316a34a&width=30" width="30" alt=""></td>
+    <td align="center" width="240"><img src="https://api.iconify.design/lucide/globe.svg?color=%2316a34a&width=30" width="30" alt=""></td>
+  </tr>
+  <tr>
+    <td align="center"><b>6 AI features</b></td>
+    <td align="center"><b>9 audit rules</b></td>
+    <td align="center"><b>5 public checks</b></td>
+    <td align="center"><b>14 grid factors</b></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>every number computed by code</sub></td>
+    <td align="center"><sub>run before any certificate is issued</sub></td>
+    <td align="center"><sub>re-run on every certificate view</sub></td>
+    <td align="center"><sub>official, picked by the site's country</sub></td>
   </tr>
 </table>
 
 ## Demo video
 
 <p align="center">
-  <a href="https://youtu.be/xWBNFqHfmGY"><img src="assets/readme/demo-video.jpg" alt="Watch the GreenTrace technical demo on YouTube (10:21)" width="860"></a>
+  <a href="https://youtu.be/xWBNFqHfmGY"><img src="assets/readme/demo-video.jpg" alt="Watch the GreenTrace technical demo on YouTube" width="860"></a>
 </p>
-
-<details>
-<summary><b>Chapters</b></summary>
-<br>
-
-| | | | |
-| --- | --- | --- | --- |
-| [0:00](https://youtu.be/xWBNFqHfmGY?t=0) Intro | [0:38](https://youtu.be/xWBNFqHfmGY?t=38) Why Hedera | [1:48](https://youtu.be/xWBNFqHfmGY?t=108) AI bill reading | [2:29](https://youtu.be/xWBNFqHfmGY?t=149) Spreadsheet import |
-| [3:02](https://youtu.be/xWBNFqHfmGY?t=182) GHG calculator | [3:27](https://youtu.be/xWBNFqHfmGY?t=207) AI and rule audit | [3:42](https://youtu.be/xWBNFqHfmGY?t=222) Certificate NFT | [3:59](https://youtu.be/xWBNFqHfmGY?t=239) Marketplace |
-| [4:40](https://youtu.be/xWBNFqHfmGY?t=280) Buying credits | [5:01](https://youtu.be/xWBNFqHfmGY?t=301) Retiring credits | [5:54](https://youtu.be/xWBNFqHfmGY?t=354) Reduction plan | [6:12](https://youtu.be/xWBNFqHfmGY?t=372) SEMA |
-| [7:41](https://youtu.be/xWBNFqHfmGY?t=461) Materiality matrix | [8:09](https://youtu.be/xWBNFqHfmGY?t=489) Report on Hedera | [8:55](https://youtu.be/xWBNFqHfmGY?t=535) Audit trail | [9:43](https://youtu.be/xWBNFqHfmGY?t=583) Climate impact |
-
-</details>
 
 ## Why we chose Hedera
 
@@ -95,14 +95,14 @@ Hedera meets all of them out of the box.
 
 <table>
   <tr>
-    <th align="left" width="33%">Try it</th>
-    <th align="left" width="33%">On Hedera testnet</th>
-    <th align="left" width="34%">Project</th>
+    <th align="left" width="33%"><img src="https://api.iconify.design/lucide/globe.svg?color=%2316a34a&width=16" width="16" alt="">&nbsp; Try it</th>
+    <th align="left" width="33%"><img src="https://api.iconify.design/lucide/blocks.svg?color=%2316a34a&width=16" width="16" alt="">&nbsp; On Hedera</th>
+    <th align="left" width="34%"><img src="https://api.iconify.design/lucide/book-open.svg?color=%2316a34a&width=16" width="16" alt="">&nbsp; Project</th>
   </tr>
   <tr valign="top">
     <td>
       <a href="https://greentrace-app.vercel.app">Live app</a><br>
-      <a href="https://greentrace-app.vercel.app/certificates/GT-2026-Q5LL89">Verify a certificate</a> (no account)<br>
+      <a href="https://greentrace-app.vercel.app/certificates/GT-2026-Q5LL89">Verify a certificate</a><br>
       <a href="https://greentrace-app.vercel.app/marketplace">Carbon credit marketplace</a><br>
       <a href="https://greentrace-app.vercel.app/api/health">Service health</a>
     </td>
@@ -295,7 +295,7 @@ For completion within seconds, the optional [`backend-listener/`](backend-listen
 </details>
 
 Full specification: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
-Diagram sources live in [docs/diagrams](docs/diagrams) (`node scripts/render-diagrams.mjs`) and [tools/make_readme_art.py](frontend/tools/make_readme_art.py).
+Diagram sources live in [docs/diagrams](docs/diagrams).
 
 ## Climate impact
 
@@ -318,7 +318,7 @@ Projections and methodology: [docs/CLIMATE-IMPACT.md](docs/CLIMATE-IMPACT.md).
 | Implementation, adoption and scalability roadmap | [docs/ADOPTION-AND-ROADMAP.md](docs/ADOPTION-AND-ROADMAP.md) |
 | User testing results | [docs/TESTING.md](docs/TESTING.md) |
 | Responsible AI statement | [docs/RESPONSIBLE-AI.md](docs/RESPONSIBLE-AI.md) |
-| Technical demo video | [YouTube, 10:21](https://youtu.be/xWBNFqHfmGY) |
+| Technical demo video | [YouTube](https://youtu.be/xWBNFqHfmGY) |
 
 ## Development
 

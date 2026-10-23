@@ -62,5 +62,8 @@ screenshots/
 __pycache__/
 .vercel
 
-# Demo video studio (takes, voice clips, renders, browser profile)
-tools/demo-studio/
+# Local tooling: README figures, diagram rendering, the submission PDF and the demo video studio
+tools/
+scripts/render-diagrams.mjs
+scripts/build-submission-pdf.mjs
+scripts/chrome.mjs

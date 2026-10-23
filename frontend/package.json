@@ -14,10 +14,7 @@
     "test:db": "./scripts/test-db.sh",
     "db:migrate": "./scripts/db-migrate.sh",
     "setup:hedera": "tsx scripts/setup-hedera.ts",
-    "seed": "tsx scripts/seed-marketplace.ts",
-    "art": ".venv/bin/python -m tools.make_readme_art",
-    "diagrams": "node scripts/render-diagrams.mjs",
-    "dossier": "node scripts/build-submission-pdf.mjs ../submission/GreenTrace-IEEE-ClimateChain-Submission.pdf"
+    "seed": "tsx scripts/seed-marketplace.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.0.0",

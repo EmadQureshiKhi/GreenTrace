@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Daily check that the live deployment is still healthy.
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  app:
+    name: App - typecheck, lint, unit tests, contracts, build
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run test:contracts
+      - name: Production build
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+
+  database:
+    name: Database - schema and row level security
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - name: Put the runner's Postgres binaries on PATH
+        run: ls -d /usr/lib/postgresql/*/bin | sort -V | tail -1 >> "$GITHUB_PATH"
+      - run: npm run test:db
+
+  listener:
+    name: Listener - typecheck
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend-listener
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend-listener/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+
+  live:
+    name: Live deployment - smoke test
+    runs-on: ubuntu-latest
+    env:
+      APP: https://greentrace-app.vercel.app
+    steps:
+      - name: Every service reports healthy
+        run: |
+          health=$(curl -fsS "$APP/api/health")
+          echo "$health"
+          echo "$health" | jq -e '.supabase and .hedera.operator and .hedera.topic and .hedera.co2eToken and .hedera.certificateToken and .hedera.exchangeContract and .ai and .exchangeScan.healthy'
+      - name: Public pages load
+        run: |
+          for path in / /marketplace /certificates /privacy /terms /certificates/GT-2026-Q5LL89; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$APP$path")
+            echo "$code $path"
+            test "$code" = 200
+          done
+      - name: A certificate verifies against Hedera
+        run: |
+          curl -fsS "$APP/api/certificates/GT-2026-Q5LL89/verify" | jq -e '.verified == true and (.checks | length == 5) and (.checks | all(.status == "pass"))'

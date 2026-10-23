@@ -118,7 +118,7 @@ The grant is claimed atomically per account and never takes the treasury below a
 
 ![The files that matter](../assets/readme/tree.png)
 
-Diagram sources: `docs/diagrams/*.mmd` (rendered by `node scripts/render-diagrams.mjs`) and `tools/make_readme_art.py`.
+Diagram sources: [`docs/diagrams/`](diagrams).
 
 ## Technology
 
