@@ -30,6 +30,7 @@
 
 <p align="center">
   <a href="#-demo-video">Demo</a> ·
+  <a href="#-why-we-chose-hedera">Why Hedera</a> ·
   <a href="#-what-it-does">Features</a> ·
   <a href="#-track-1-alignment">Track 1</a> ·
   <a href="#-ai-that-you-can-audit">AI</a> ·
@@ -74,6 +75,21 @@
 | [7:41](https://youtu.be/xWBNFqHfmGY?t=461) Materiality matrix | [8:09](https://youtu.be/xWBNFqHfmGY?t=489) Report on Hedera | [8:55](https://youtu.be/xWBNFqHfmGY?t=535) Audit trail | [9:43](https://youtu.be/xWBNFqHfmGY?t=583) Climate impact |
 
 </details>
+
+## 🌿 Why we chose Hedera
+
+A carbon accounting platform is only as trustworthy as the ledger underneath it, and that ledger should not add to the problem it measures.
+We compared the options against what GreenTrace actually needs: a cheap, ordered, permanent record of every step, native carbon tokens that can be destroyed on retirement, and wallets people already use.
+Hedera meets all of them out of the box.
+
+| Reason | Why it matters for GreenTrace |
+| --- | --- |
+| 🌱 **Low energy, carbon negative** | In UCL's 2021 study of proof-of-stake networks, Hedera had the lowest energy use of the networks compared, and Hedera offsets its own footprint. A climate tool should not run on a ledger that adds emissions. |
+| 🧾 **Consensus Service built for audit trails** | Every bill reading, audit, certificate, purchase, retirement and SEMA step is written to one [HCS topic](https://hashscan.io/testnet/topic/0.0.11116480) with a consensus timestamp and a fixed order. Records cannot be edited or deleted, which is what makes the trail compliance-ready. |
+| 💲 **Fixed fees of a fraction of a cent** | Fees are priced in US dollars (paid in HBAR), not bid in a gas auction, so cost is predictable. Logging a finalized SEMA report cost **$0.00024**, so we can anchor every step, not just the final certificate. |
+| 🪙 **Native tokens with retirement built in** | CO2e credits are a Hedera Token Service token and certificates are HTS NFTs. Retiring credits uses the token's wipe key, which removes them from the total supply, so a tonne can never be sold or claimed twice. No custom token contract to audit. |
+| ⚡ **Final in seconds** | Hashgraph consensus is final in a few seconds with no forks or reorganizations, so a purchase can be verified and delivered while the buyer is still on the page. |
+| 🦊 **EVM and a public mirror node** | Buyers pay and sign with MetaMask through a Solidity contract, and the server checks every payment and retirement on the mirror node before it delivers or burns anything. |
 
 ## 🔗 Links
 
@@ -198,12 +214,7 @@
 
 **Example:** certificate [`GT-2026-DG4WM6`](https://hashscan.io/testnet/token/0.0.11116483/1), 27.91 t CO2e, fully offset by 28 retired credits.
 
-### Why Hedera
-
-- **A climate ledger that doesn't add to the problem**: in UCL's comparison of proof-of-stake networks Hedera used the least energy, and Hedera offsets its own footprint.
-- **An ordered, immutable audit trail** at a fraction of a cent per record, so every step can be anchored and nothing can be edited or deleted afterwards.
-- **Native tokens with retirement built in**: wiping a credit removes it from supply, which is exactly what prevents double counting.
-- **An EVM** so any MetaMask wallet can pay and sign, and a **mirror node** the server uses to verify every payment and retirement before acting.
+Why these services, and not another chain: see [Why we chose Hedera](#-why-we-chose-hedera).
 
 ## 🖼️ Screenshots
 
