@@ -223,7 +223,7 @@ Why these services, and not another chain: see [Why we chose Hedera](#why-we-cho
 
 > [!TIP]
 > **Trying it as a judge?** No setup needed.
-> Open [greentrace-app.vercel.app](https://greentrace-app.vercel.app), sign up with email or Google, link MetaMask from the account menu and press **Get 25 test HBAR**.
+> Open [greentrace-app.vercel.app](https://greentrace-app.vercel.app), sign up with email or Google, link MetaMask from the account menu (Hedera testnet, chain 296) and press **Get 25 test HBAR**.
 > The treasury funds your wallet once, so you can buy and retire credits on testnet without the public faucet.
 
 <details>
