@@ -5,48 +5,150 @@
 </picture>
 
 <p align="center">
-  <a href="https://greentrace-app.vercel.app"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-greentrace--app.vercel.app-16a34a"></a>
-  <a href="https://ieee-climatechain-hack.devpost.com/"><img alt="IEEE ClimateChain Global Hackathon 2026" src="https://img.shields.io/badge/IEEE%20ClimateChain-Hackathon%202026-00629B"></a>
+  AI reads utility bills into an audited greenhouse gas inventory.<br>
+  Hedera certifies it, and carbon credits are bought and retired on chain, with a public proof for every step.
+</p>
+
+<p align="center">
+  <a href="https://greentrace-app.vercel.app"><img alt="Open the live app" src="https://img.shields.io/badge/Open_the_live_app-16a34a?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://youtu.be/xWBNFqHfmGY"><img alt="Watch the demo" src="https://img.shields.io/badge/Watch_the_demo-10:21-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
+  <a href="https://greentrace-app.vercel.app/certificates/GT-2026-Q5LL89"><img alt="Verify a certificate" src="https://img.shields.io/badge/Verify_a_certificate-0f766e?style=for-the-badge&logo=checkmarx&logoColor=white"></a>
+  <a href="https://hashscan.io/testnet/topic/0.0.11116480"><img alt="Audit trail on HashScan" src="https://img.shields.io/badge/Audit_trail-HashScan-222222?style=for-the-badge&logo=hedera&logoColor=white"></a>
+</p>
+
+<p align="center">
+  <a href="https://ieee-climatechain-hack.devpost.com/"><img alt="IEEE ClimateChain Global Hackathon 2026" src="https://img.shields.io/badge/IEEE%20ClimateChain-Hackathon%202026-00629B?logo=ieee&logoColor=white"></a>
   <img alt="Track 1" src="https://img.shields.io/badge/Track%201-Carbon%20Markets%20%26%20Emissions%20Transparency-16a34a">
   <a href="https://hashscan.io/testnet/topic/0.0.11116480"><img alt="Hedera testnet" src="https://img.shields.io/badge/Hedera-testnet-222222?logo=hedera"></a>
   <img alt="AI" src="https://img.shields.io/badge/AI-OpenAI%20%7C%20Claude-8b5cf6">
   <img alt="Next.js 14" src="https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white">
   <img alt="Supabase" src="https://img.shields.io/badge/Supabase-Postgres%20%2B%20RLS-3ecf8e?logo=supabase&logoColor=white">
+  <img alt="Solidity" src="https://img.shields.io/badge/Solidity-0.8.24-363636?logo=solidity">
   <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-blue">
 </p>
 
-GreenTrace turns electricity, gas and fuel bills into an audited greenhouse gas inventory with AI, certifies it on Hedera, and lets organizations buy and retire carbon credits on chain, with a public proof for every step.
+<p align="center">
+  <a href="#-demo-video">Demo</a> ·
+  <a href="#-what-it-does">Features</a> ·
+  <a href="#-track-1-alignment">Track 1</a> ·
+  <a href="#-ai-that-you-can-audit">AI</a> ·
+  <a href="#%EF%B8%8F-hedera-integration">Hedera</a> ·
+  <a href="#%EF%B8%8F-screenshots">Screenshots</a> ·
+  <a href="#-quick-start">Quick start</a> ·
+  <a href="#%EF%B8%8F-architecture">Architecture</a> ·
+  <a href="#-ieee-climatechain-deliverables">Deliverables</a>
+</p>
 
-**Live demo:** [greentrace-app.vercel.app](https://greentrace-app.vercel.app), on Hedera testnet. A certificate anyone can verify: [GT-2026-Q5LL89](https://greentrace-app.vercel.app/certificates/GT-2026-Q5LL89).
+<p align="center">
+  Built for the <b>IEEE ClimateChain Global Hackathon 2026</b>, <b>Track 1: Carbon Markets & Emissions Transparency</b>,<br>
+  organized by the <a href="https://cmte.ieee.org/turkiye-blockchain/hackatlon/">IEEE Blockchain Türkiye Group</a> with the IEEE Blockchain Technical Committee and IEEE chapters in support of UN COP 31.
+</p>
 
-Built for the **IEEE ClimateChain Global Hackathon 2026**, **Track 1: Carbon Markets & Emissions Transparency**, organized by the [IEEE Blockchain Türkiye Group](https://cmte.ieee.org/turkiye-blockchain/hackatlon/) with the IEEE Blockchain Technical Committee and IEEE chapters in support of UN COP 31.
+<br>
+
+<table align="center">
+  <tr>
+    <td align="center" width="25%">🤖<br><b>6 AI features</b><br><sub>every number computed by code</sub></td>
+    <td align="center" width="25%">🔍<br><b>9 audit rules</b><br><sub>before any certificate is issued</sub></td>
+    <td align="center" width="25%">✅<br><b>5 public checks</b><br><sub>re-run on every certificate view</sub></td>
+    <td align="center" width="25%">🌍<br><b>14 grid factors</b><br><sub>official, picked by the site's country</sub></td>
+  </tr>
+</table>
+
+## 🎬 Demo video
+
+<p align="center">
+  <a href="https://youtu.be/xWBNFqHfmGY"><img src="frontend/assets/readme/demo-video.jpg" alt="Watch the GreenTrace technical demo on YouTube (10:21)" width="860"></a>
+</p>
+
+<details>
+<summary><b>Chapters</b></summary>
+<br>
+
+| | | | |
+| --- | --- | --- | --- |
+| [0:00](https://youtu.be/xWBNFqHfmGY?t=0) Intro | [0:38](https://youtu.be/xWBNFqHfmGY?t=38) Why Hedera | [1:48](https://youtu.be/xWBNFqHfmGY?t=108) AI bill reading | [2:29](https://youtu.be/xWBNFqHfmGY?t=149) Spreadsheet import |
+| [3:02](https://youtu.be/xWBNFqHfmGY?t=182) GHG calculator | [3:27](https://youtu.be/xWBNFqHfmGY?t=207) AI and rule audit | [3:42](https://youtu.be/xWBNFqHfmGY?t=222) Certificate NFT | [3:59](https://youtu.be/xWBNFqHfmGY?t=239) Marketplace |
+| [4:40](https://youtu.be/xWBNFqHfmGY?t=280) Buying credits | [5:01](https://youtu.be/xWBNFqHfmGY?t=301) Retiring credits | [5:54](https://youtu.be/xWBNFqHfmGY?t=354) Reduction plan | [6:12](https://youtu.be/xWBNFqHfmGY?t=372) SEMA |
+| [7:41](https://youtu.be/xWBNFqHfmGY?t=461) Materiality matrix | [8:09](https://youtu.be/xWBNFqHfmGY?t=489) Report on Hedera | [8:55](https://youtu.be/xWBNFqHfmGY?t=535) Audit trail | [9:43](https://youtu.be/xWBNFqHfmGY?t=583) Climate impact |
+
+</details>
 
 ## 🔗 Links
 
-| What | Link |
-| --- | --- |
-| Live app (Hedera testnet) | [greentrace-app.vercel.app](https://greentrace-app.vercel.app) |
-| Verify a certificate, no account needed | [GT-2026-Q5LL89](https://greentrace-app.vercel.app/certificates/GT-2026-Q5LL89) |
-| Carbon credit marketplace | [greentrace-app.vercel.app/marketplace](https://greentrace-app.vercel.app/marketplace) |
-| Service health | [greentrace-app.vercel.app/api/health](https://greentrace-app.vercel.app/api/health) |
-| Source code | [github.com/EmadQureshiKhi/GreenTrace](https://github.com/EmadQureshiKhi/GreenTrace) |
-| Audit trail (HCS topic) | [0.0.11116480 on HashScan](https://hashscan.io/testnet/topic/0.0.11116480) |
-| CO2e credit token | [0.0.11116482 on HashScan](https://hashscan.io/testnet/token/0.0.11116482) |
-| Certificate NFTs | [0.0.11116483 on HashScan](https://hashscan.io/testnet/token/0.0.11116483) |
-| Exchange contract | [0.0.11116506 on HashScan](https://hashscan.io/testnet/contract/0.0.11116506) |
-| Hackathon | [IEEE ClimateChain Global Hackathon 2026 on Devpost](https://ieee-climatechain-hack.devpost.com/) |
-| Privacy and terms | [Privacy policy](https://greentrace-app.vercel.app/privacy) · [Terms of use](https://greentrace-app.vercel.app/terms) |
+<table>
+  <tr>
+    <th align="left" width="33%">🌐 Try it</th>
+    <th align="left" width="33%">⛓️ On Hedera testnet</th>
+    <th align="left" width="34%">📚 Project</th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://greentrace-app.vercel.app">Live app</a><br>
+      <a href="https://greentrace-app.vercel.app/certificates/GT-2026-Q5LL89">Verify a certificate</a> (no account)<br>
+      <a href="https://greentrace-app.vercel.app/marketplace">Carbon credit marketplace</a><br>
+      <a href="https://greentrace-app.vercel.app/api/health">Service health</a>
+    </td>
+    <td>
+      <a href="https://hashscan.io/testnet/topic/0.0.11116480">Audit trail (HCS) <code>0.0.11116480</code></a><br>
+      <a href="https://hashscan.io/testnet/token/0.0.11116482">CO2e credit token <code>0.0.11116482</code></a><br>
+      <a href="https://hashscan.io/testnet/token/0.0.11116483">Certificate NFTs <code>0.0.11116483</code></a><br>
+      <a href="https://hashscan.io/testnet/contract/0.0.11116506">Exchange contract <code>0.0.11116506</code></a>
+    </td>
+    <td>
+      <a href="https://youtu.be/xWBNFqHfmGY">Demo video</a><br>
+      <a href="https://ieee-climatechain-hack.devpost.com/">Hackathon on Devpost</a><br>
+      <a href="#-ieee-climatechain-deliverables">Deliverable documents</a><br>
+      <a href="https://greentrace-app.vercel.app/privacy">Privacy</a> · <a href="https://greentrace-app.vercel.app/terms">Terms</a>
+    </td>
+  </tr>
+</table>
 
 ## 🌱 What it does
 
-- **AI bill reading**: drop in PDFs or photos of bills; the AI transcribes quantities with the exact evidence text and a confidence score, and emissions are computed from an official emission factor catalog, never by the model.
-- **AI pre-certification audit**: nine deterministic checks plus an AI reviewer catch double-counted bills, overlapping periods, unit slips and implausible values; a high-risk inventory cannot be certified.
-- **Verifiable certificates**: the inventory is hashed, its metadata pinned to IPFS, a certificate NFT minted and the record written to Hedera Consensus Service; anyone can verify it from a public page.
-- **Carbon credit marketplace**: AI quality ratings for every project, an AI offset advisor that builds a basket for your remaining emissions, and purchases paid in HBAR through a smart contract.
-- **On-chain retirement**: retiring credits destroys the tokens, so a tonne can never be sold or claimed twice.
-- **AI reduction planner**: a costed plan with tonnes computed from your own inventory and a trajectory to your target year.
-- **Materiality and GRI reporting**: stakeholder engagement and materiality assessment, with AI-drafted GRI disclosures that mark missing facts instead of inventing them.
+<table>
+  <tr valign="top">
+    <td width="50%">
+      <h4>📄 AI bill reading</h4>
+      Drop in PDFs or photos of bills. The AI transcribes quantities with the exact evidence text and a confidence score; emissions come from an official factor catalog, never from the model.
+    </td>
+    <td width="50%">
+      <h4>🔍 Pre-certification audit</h4>
+      Nine deterministic checks plus an AI reviewer catch double-counted bills, overlapping periods, unit slips and implausible values. A high-risk inventory cannot be certified.
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>
+      <h4>🏅 Verifiable certificates</h4>
+      The inventory is hashed, its metadata pinned to IPFS, a certificate NFT minted and the record written to Hedera Consensus Service. Anyone can verify it from a public page.
+    </td>
+    <td>
+      <h4>🛒 Carbon credit marketplace</h4>
+      AI quality ratings for every project, an AI offset advisor that builds a basket for your remaining emissions, and purchases paid in HBAR through a smart contract.
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>
+      <h4>🔥 On-chain retirement</h4>
+      Retiring credits wipes the tokens from your account and from supply, so a tonne can never be sold or claimed twice.
+    </td>
+    <td>
+      <h4>📉 AI reduction planner</h4>
+      A costed plan with tonnes computed from your own inventory and a trajectory to your target year, anchored so progress can be checked.
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>
+      <h4>🤝 SEMA and GRI reporting</h4>
+      Stakeholder engagement and materiality assessment with every step logged on Hedera, and AI-drafted GRI disclosures that mark missing facts instead of inventing them.
+    </td>
+    <td>
+      <h4>🧮 GHG calculator and imports</h4>
+      A GHG Protocol calculator for what bills miss (refrigerant leaks, fuels), and spreadsheet import that maps columns and activities by itself.
+    </td>
+  </tr>
+</table>
 
 <img src="frontend/assets/readme/pipeline.png" alt="From a utility bill to a retired tonne: AI reads bills into an inventory, nine rules and an AI auditor gate certification on Hedera, then credits are rated, bought through a contract and retired by wiping the tokens" width="960">
 
@@ -74,35 +176,34 @@ Built for the **IEEE ClimateChain Global Hackathon 2026**, **Track 1: Carbon Mar
 | Reduction planner | Proposes measures and the share of a source each removes | Tonnes, annualization, trajectory | `AI_REDUCTION_PLAN` |
 | GRI drafter | Drafts GRI 2-29, 3-1, 3-2, 3-3, 305-1 and 305-2 | Missing facts marked `[DATA NEEDED]` | `AI_GRI_DRAFT` |
 
-Outputs are schema-validated JSON; every AI result is hashed with its model and prompt version and logged on chain.
-Bill reading runs on `gpt-5.4-mini` (as accurate as the larger model in [testing](frontend/docs/TESTING.md#ai-model-evaluation)), the judgement-heavy features on `gpt-5.5`; Claude is supported as a drop-in alternative.
-See [Responsible AI](frontend/docs/RESPONSIBLE-AI.md).
+> [!NOTE]
+> Outputs are schema-validated JSON, and every AI result is hashed with its model and prompt version and logged on chain.
+> Bill reading runs on `gpt-5.4-mini` (as accurate as the larger model in [testing](frontend/docs/TESTING.md#ai-model-evaluation)), the judgement-heavy features on `gpt-5.5`; Claude is supported as a drop-in alternative.
+> See [Responsible AI](frontend/docs/RESPONSIBLE-AI.md).
 
 <p align="center">
   <img src="frontend/docs/images/bill-reading.png" alt="AI bill reading catching a duplicate bill" width="49%"/>
   <img src="frontend/docs/images/audit.png" alt="AI audit before certification" width="49%"/>
 </p>
 
-## 🔗 Hedera integration
-
-### Core infrastructure (testnet)
+## ⛓️ Hedera integration
 
 | Asset | ID | Purpose |
 | --- | --- | --- |
-| Audit topic (HCS) | [`0.0.11116480`](https://hashscan.io/testnet/topic/0.0.11116480) | Ordered, timestamped record of every certificate, audit, AI result, purchase and retirement |
-| CO2e credit token (HTS) | [`0.0.11116482`](https://hashscan.io/testnet/token/0.0.11116482) | 1 token = 1 tonne CO2e; wipe key retires credits from supply |
-| Certificate NFTs (HTS) | [`0.0.11116483`](https://hashscan.io/testnet/token/0.0.11116483) | One NFT per certificate, metadata on IPFS |
-| GreenTraceExchange (EVM) | [`0.0.11116506`](https://hashscan.io/testnet/contract/0.0.11116506) | HBAR purchases (one payment per order) and retirement requests |
-| Treasury | [`0.0.11116474`](https://hashscan.io/testnet/account/0.0.11116474) | Mints, delivers and retires; key held only on the server |
+| 🧾 Audit topic (HCS) | [`0.0.11116480`](https://hashscan.io/testnet/topic/0.0.11116480) | Ordered, timestamped, immutable record of every certificate, audit, AI result, purchase, retirement and SEMA step |
+| 🌿 CO2e credit token (HTS) | [`0.0.11116482`](https://hashscan.io/testnet/token/0.0.11116482) | 1 token = 1 tonne CO2e; the wipe key retires credits from supply |
+| 🏅 Certificate NFTs (HTS) | [`0.0.11116483`](https://hashscan.io/testnet/token/0.0.11116483) | One NFT per certificate, metadata on IPFS |
+| 💱 GreenTraceExchange (EVM) | [`0.0.11116506`](https://hashscan.io/testnet/contract/0.0.11116506) | HBAR purchases (one payment per order) and retirement requests |
+| 🏦 Treasury | [`0.0.11116474`](https://hashscan.io/testnet/account/0.0.11116474) | Mints, delivers and retires; its key is held only on the server |
 
 **Example:** certificate [`GT-2026-DG4WM6`](https://hashscan.io/testnet/token/0.0.11116483/1), 27.91 t CO2e, fully offset by 28 retired credits.
 
 ### Why Hedera
 
-- **An ordered, tamper-evident log** at a fraction of a cent per record, so every step can be anchored.
+- **A climate ledger that doesn't add to the problem**: in UCL's comparison of proof-of-stake networks Hedera used the least energy, and Hedera offsets its own footprint.
+- **An ordered, immutable audit trail** at a fraction of a cent per record, so every step can be anchored and nothing can be edited or deleted afterwards.
 - **Native tokens with retirement built in**: wiping a credit removes it from supply, which is exactly what prevents double counting.
 - **An EVM** so any MetaMask wallet can pay and sign, and a **mirror node** the server uses to verify every payment and retirement before acting.
-- **Energy-efficient proof-of-stake consensus**, appropriate for a climate application.
 
 ## 🖼️ Screenshots
 
@@ -118,7 +219,16 @@ See [Responsible AI](frontend/docs/RESPONSIBLE-AI.md).
 
 ## 🚀 Quick start
 
-### Prerequisites
+> [!TIP]
+> **Trying it as a judge?** No setup needed.
+> Open [greentrace-app.vercel.app](https://greentrace-app.vercel.app), sign up with email or Google, link MetaMask from the account menu and press **Get 25 test HBAR**.
+> The treasury funds your wallet once, so you can buy and retire credits on testnet without the public faucet.
+
+<details>
+<summary><b>Run it locally</b></summary>
+<br>
+
+**Prerequisites**
 
 - Node.js 20+ and `psql`
 - A Supabase project
@@ -126,7 +236,7 @@ See [Responsible AI](frontend/docs/RESPONSIBLE-AI.md).
 - An OpenAI or Anthropic API key (optional: without one the rule-based audit still runs)
 - A Pinata JWT (optional: without it metadata is content-addressed and served by the app)
 
-### Installation
+**Install and run**
 
 ```bash
 cd frontend
@@ -138,7 +248,7 @@ npm run seed                    # sample marketplace listings
 npm run dev                     # http://localhost:3000
 ```
 
-### Completing payments when the tab closes
+**Completing payments when the tab closes**
 
 ```bash
 psql "$SUPABASE_DB_URL" -v app_url=https://your-app.vercel.app -f supabase/schedule-scan.sql
@@ -147,9 +257,7 @@ psql "$SUPABASE_DB_URL" -v app_url=https://your-app.vercel.app -f supabase/sched
 Supabase's pg_cron then calls `/api/internal/scan` every minute, which reads new exchange events from the mirror node and completes any purchase or retirement the browser did not report.
 For completion within seconds, the optional [`backend-listener/`](backend-listener) service does the same continuously.
 
-### Trying it as a judge
-
-Open [greentrace-app.vercel.app](https://greentrace-app.vercel.app), sign up with email or Google, link MetaMask from the account menu and press **Get 25 test HBAR**: the treasury funds your wallet once, so you can buy and retire credits on testnet without the public faucet.
+</details>
 
 ## 🏗️ Architecture
 
@@ -180,9 +288,11 @@ Diagram sources live in [docs/diagrams](frontend/docs/diagrams) (`node scripts/r
 
 ## 🌍 Climate impact
 
-- **Accurate measurement**: AI removes manual transcription, the audit catches the errors that inflate or hide emissions, and electricity uses the official national grid factor for the bill's country (13 countries plus the EU-27 average, each from the publisher's own document, listed in [`src/data/gridFactors.ts`](frontend/src/data/gridFactors.ts)).
-- **Integrity of offsets**: quality ratings steer buyers to better credits, and retirement destroys tokens so nothing is double counted.
-- **Real reductions**: plans quantified from measured data, anchored so progress can be checked against the next certified inventory.
+| | |
+| --- | --- |
+| 📏 **Accurate measurement** | AI removes manual transcription, the audit catches the errors that inflate or hide emissions, and electricity uses the official national grid factor for the bill's country (13 countries plus the EU-27 average, each from the publisher's own document, listed in [`src/data/gridFactors.ts`](frontend/src/data/gridFactors.ts)) |
+| ✅ **Integrity of offsets** | Quality ratings steer buyers to better credits, and retirement destroys tokens so nothing is double counted |
+| 📉 **Real reductions** | Plans quantified from measured data, anchored so progress can be checked against the next certified inventory |
 
 Projections and methodology: [docs/CLIMATE-IMPACT.md](frontend/docs/CLIMATE-IMPACT.md).
 
@@ -190,23 +300,20 @@ Projections and methodology: [docs/CLIMATE-IMPACT.md](frontend/docs/CLIMATE-IMPA
 
 | Deliverable | Document |
 | --- | --- |
-| Problem statement and solution overview | [docs/PROBLEM-AND-SOLUTION.md](frontend/docs/PROBLEM-AND-SOLUTION.md) |
-| Architecture diagram and technical specification | [docs/ARCHITECTURE.md](frontend/docs/ARCHITECTURE.md) |
-| Security and data integrity assessment | [docs/SECURITY.md](frontend/docs/SECURITY.md) |
-| Climate impact assessment and reduction projections | [docs/CLIMATE-IMPACT.md](frontend/docs/CLIMATE-IMPACT.md) |
-| Implementation, adoption and scalability roadmap | [docs/ADOPTION-AND-ROADMAP.md](frontend/docs/ADOPTION-AND-ROADMAP.md) |
-| User testing results | [docs/TESTING.md](frontend/docs/TESTING.md) |
-| Responsible AI statement | [docs/RESPONSIBLE-AI.md](frontend/docs/RESPONSIBLE-AI.md) |
-
-## 🔧 Configuration
-
-All settings live in `frontend/.env.local`; [`frontend/.env.example`](frontend/.env.example) documents each one.
-No secret is ever exposed to the browser: `NEXT_PUBLIC_` variables hold public identifiers only.
+| 🧩 Problem statement and solution overview | [docs/PROBLEM-AND-SOLUTION.md](frontend/docs/PROBLEM-AND-SOLUTION.md) |
+| 🏗️ Architecture diagram and technical specification | [docs/ARCHITECTURE.md](frontend/docs/ARCHITECTURE.md) |
+| 🔐 Security and data integrity assessment | [docs/SECURITY.md](frontend/docs/SECURITY.md) |
+| 🌍 Climate impact assessment and reduction projections | [docs/CLIMATE-IMPACT.md](frontend/docs/CLIMATE-IMPACT.md) |
+| 🚀 Implementation, adoption and scalability roadmap | [docs/ADOPTION-AND-ROADMAP.md](frontend/docs/ADOPTION-AND-ROADMAP.md) |
+| 🧪 User testing results | [docs/TESTING.md](frontend/docs/TESTING.md) |
+| 🤖 Responsible AI statement | [docs/RESPONSIBLE-AI.md](frontend/docs/RESPONSIBLE-AI.md) |
+| 🎬 Technical demo video | [YouTube, 10:21](https://youtu.be/xWBNFqHfmGY) |
 
 ## 🛠️ Development
 
 ```bash
-npm test                 # unit tests: units, catalog, audit rules, AI arithmetic, hashing
+cd frontend
+npm test                 # unit tests: units, catalog, audit rules, AI arithmetic, hashing, links
 npm run test:contracts   # GreenTraceExchange
 npm run test:db          # schema and row level security against a throwaway Postgres
 npm run typecheck && npm run lint
@@ -215,21 +322,32 @@ npm run typecheck && npm run lint
 | Layer | Technology |
 | --- | --- |
 | App | Next.js 14, React 18, TypeScript, Tailwind CSS, Radix UI, TanStack Query, Recharts |
-| Data | Supabase (Postgres with row level security, Auth, Storage) |
+| Data | Supabase (Postgres with row level security, Auth, Storage, pg_cron) |
 | Ledger | Hedera Consensus Service, Token Service, EVM, mirror node; `@hashgraph/sdk`, ethers v6 |
 | Contracts | Solidity 0.8.24, Hardhat |
 | AI | OpenAI or Anthropic SDK with schema-validated structured outputs |
 | Storage | IPFS via Pinata |
 
+All settings live in `frontend/.env.local`; [`frontend/.env.example`](frontend/.env.example) documents each one.
+No secret is ever exposed to the browser: `NEXT_PUBLIC_` variables hold public identifiers only.
+
 <img src="frontend/assets/readme/repository.png" alt="What lives where: the web app, the server-only modules that hold the treasury key and the AI services, and the ledger and data layer with the contract, the schema and the scheduled scan" width="960">
 
+<details>
+<summary><b>Annotated file tree</b></summary>
+<br>
 <img src="frontend/assets/readme/tree.png" alt="Annotated file tree of the GreenTrace repository, with the AI services under src/server/ai highlighted" width="960">
+</details>
 
 ## 🔐 Security
 
 Treasury signing happens only on the server; row level security keeps inventories private and makes certificates, ratings and retirements a public registry; payments and retirements are verified on the mirror node before anything moves.
 Details: [docs/SECURITY.md](frontend/docs/SECURITY.md).
 
-## 📄 License
+---
 
-MIT. See [LICENSE](LICENSE).
+<p align="center">
+  <img src="frontend/assets/readme/mark.png" alt="GreenTrace" width="56"><br>
+  <b>GreenTrace</b> · carbon accounting you can verify, not just trust<br>
+  Built by <a href="https://github.com/EmadQureshiKhi">Emad Qureshi</a> · <a href="LICENSE">MIT License</a>
+</p>
